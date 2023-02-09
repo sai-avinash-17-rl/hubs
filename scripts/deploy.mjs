@@ -77,7 +77,7 @@ const getTs = (() => {
   step.text = "Building Admin Console.";
 
   await new Promise((resolve, reject) => {
-    exec("npm ci", { cwd: "./admin" }, err => {
+    exec("npm install", { cwd: "./admin" }, err => {
       if (err) reject(err);
       resolve();
     });
